@@ -1,0 +1,139 @@
+{
+  "name": "vision-camera-image-labeling",
+  "version": "0.0.1",
+  "description": "VisionCamera Frame Processor Plugin to label images using MLKit Vision",
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "vision-camera-image-labeler.podspec",
+    "!lib/typescript/example",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "scripts": {
+    "test": "jest",
+    "typescript": "tsc --noEmit",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "prepare": "bob build",
+    "release": "release-it",
+    "example": "yarn --cwd example",
+    "pods": "cd example && pod-install --quiet",
+    "bootstrap": "yarn example && yarn && yarn pods"
+  },
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "repository": "https://github.com/hashaneranda/vision-camera-image-labeling",
+  "author": "Hashan Jayalath <hashaneranda@gmail.com> (https://github.com/hashaneranda)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hashaneranda/vision-camera-image-labeling/issues"
+  },
+  "homepage": "https://github.com/hashaneranda/vision-camera-image-labeling#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@release-it/conventional-changelog": "^2.0.0",
+    "@types/react": "^17.0.18",
+    "@types/react-native": "0.64.13",
+    "commitlint": "^11.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "pod-install": "^0.1.26",
+    "prettier": "^2.0.5",
+    "react": "17.0.1",
+    "react-native": "0.64.2",
+    "react-native-builder-bob": "^0.18.1",
+    "react-native-vision-camera": "^2.6.1",
+    "react-native-reanimated": "2.2.0",
+    "release-it": "^14.11.4",
+    "typescript": "^4.1.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "@react-native-community",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "quoteProps": "consistent",
+          "singleQuote": true,
+          "tabWidth": 2,
+          "trailingComma": "es5",
+          "useTabs": false
+        }
+      ],
+      "react-hooks/exhaustive-deps": [
+        "warn",
+        {
+          "additionalHooks": "(useFrameProcessor)"
+        }
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
+  "prettier": {
+    "quoteProps": "consistent",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "es5",
+    "useTabs": false
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}
