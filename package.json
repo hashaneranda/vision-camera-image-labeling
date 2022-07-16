@@ -1,6 +1,6 @@
 {
   "name": "vision-camera-image-labeling",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "VisionCamera Frame Processor Plugin to label images using MLKit Vision",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
