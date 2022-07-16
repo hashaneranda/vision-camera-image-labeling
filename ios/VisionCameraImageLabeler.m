@@ -1,9 +1,4 @@
-//
-//  VisionCameraImageLabeler.m
-//  VisionCameraExample
-//
-//  Created by Marc Rousavy on 06.05.21.
-//
+
 
 #import <VisionCamera/FrameProcessorPlugin.h>
 #import <VisionCamera/Frame.h>

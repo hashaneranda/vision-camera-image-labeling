@@ -28,6 +28,11 @@ android {
 
     }
 
+    aaptOptions {
+        noCompress "tflite"
+        // or noCompress "lite"
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -57,5 +62,5 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
     api project(":react-native-vision-camera")
     implementation "androidx.camera:camera-core:1.1.0-alpha08"
-    implementation 'com.google.android.gms:play-services-mlkit-image-labeling:16.0.7'
+    implementation 'com.google.android.gms:play-services-mlkit-image-labeling-custom:16.0.0-beta3'
 }

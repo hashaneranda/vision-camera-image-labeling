@@ -2,7 +2,7 @@
 <img align="right" src="https://github.com/mrousavy/react-native-vision-camera/blob/main/docs/static/img/frame-processors.gif?raw=true">
 </div>
 
-# vision-camera-image-labeler
+# vision-camera-image-labeling
 
 A [VisionCamera](https://github.com/mrousavy/react-native-vision-camera) Frame Processor Plugin to label images using [**MLKit Vision** Image Labeling](https://developers.google.com/ml-kit/vision/image-labeling).
 
@@ -33,7 +33,7 @@ module.exports = {
 ## Usage
 
 ```js
-import { labelImage } from "vision-camera-image-labeler";
+import { labelImage } from 'vision-camera-image-labeler';
 
 // ...
 
