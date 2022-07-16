@@ -15,7 +15,6 @@ import com.google.mlkit.vision.label.ImageLabeler;
 import com.google.mlkit.vision.label.ImageLabeling;
 import com.google.mlkit.common.model.LocalModel;
 import com.google.mlkit.vision.label.custom.CustomImageLabelerOptions;
-import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 import com.mrousavy.camera.frameprocessor.FrameProcessorPlugin;
 
 import org.jetbrains.annotations.NotNull;
