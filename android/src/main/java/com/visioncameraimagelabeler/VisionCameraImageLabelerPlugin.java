@@ -41,7 +41,7 @@ public class VisionCameraImageLabelerPlugin extends FrameProcessorPlugin {
 
     CustomImageLabelerOptions customImageLabelerOptions =
         new CustomImageLabelerOptions.Builder(localModel)
-            .setConfidenceThreshold(0.5f)
+            // .setConfidenceThreshold(0.5f)
             .setMaxResultCount(5)
             .build();
     ImageLabeler labeler = ImageLabeling.getClient(customImageLabelerOptions);
